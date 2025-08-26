@@ -26,3 +26,5 @@ tags:
 - [Создание Instagram с нуля на Ruby on Rails](https://www.dropbox.com/s/9vq430e9s3q7pu8/Let%27s%20Build%20Instagram%20with%20Ruby%20on%20Rails%20-%20Free%20Edition.pdf?dl=0)
 - [Создание социальной сети с Rails](https://medium.com/rails-ember-beyond/how-to-build-a-social-network-using-rails-eb31da569233)
 - [Как создать приложение на Ruby on Rails](https://www.digitalocean.com/community/tutorials/how-to-build-a-ruby-on-rails-application)
+
+**[⬆ Вернуться к оглавлению](../index.md)**

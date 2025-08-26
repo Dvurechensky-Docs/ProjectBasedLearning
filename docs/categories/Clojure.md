@@ -16,3 +16,5 @@ tags:
 - [Интеграция JIRA с Clojure и Atlassian Connect](https://hackernoon.com/building-a-jira-integration-with-clojure-atlassian-connect-506ebd112807)
 - [Прототипирование с Clojure](https://github.com/aliaksandr-s/prototyping-with-clojure)
 - [Tetris на ClojureScript](https://shaunlebron.github.io/t3tr0s-slides)
+
+**[⬆ Вернуться к оглавлению](../index.md)**

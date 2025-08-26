@@ -184,3 +184,5 @@ tags:
 - [Создание собственного Git](https://wyag.thb.lt/)
 - [Python-реализация интерпретатора Python байткода](https://www.aosabook.org/en/500L/a-python-interpreter-written-in-python.html)
 - [Создание голосового ассистента с использованием Python](https://www.geeksforgeeks.org/voice-assistant-using-python/)
+
+**[⬆ Вернуться к оглавлению](../index.md)**

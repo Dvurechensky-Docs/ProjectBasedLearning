@@ -26,3 +26,5 @@ tags:
   - [Часть 6: Профиль пользователя](https://medium.com/@ashokgelal/a-full-featured-multi-tenant-app-with-laravel-part-5-user-profile-5c3d0c655f3a)
   - [Часть 7: Деплой](https://medium.com/@ashokgelal/a-full-featured-multi-tenant-app-with-laravel-part-7-deployment-40bb3c895627)
 - [Создание CRUD-приложения на Laravel с нуля](https://www.codewall.co.uk/laravel-crud-demo-with-resource-controller-tutorial/)
+
+**[⬆ Вернуться к оглавлению](../index.md)**

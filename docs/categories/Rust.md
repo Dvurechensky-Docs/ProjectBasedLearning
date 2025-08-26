@@ -30,3 +30,5 @@ tags:
   - [Часть 2](https://pwy.io/en/posts/learning-to-fly-pt2/)
   - [Часть 3](https://pwy.io/en/posts/learning-to-fly-pt3/)
   - [Часть 4](https://pwy.io/en/posts/learning-to-fly-pt4/)
+
+**[⬆ Вернуться к оглавлению](../index.md)**

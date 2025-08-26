@@ -30,3 +30,5 @@ tags:
   - [Часть 13: Дерево навыков](https://github.com/SSYGEN/blog/issues/27)
   - [Часть 14: Консоль](https://github.com/SSYGEN/blog/issues/28)
   - [Часть 15: Финал](https://github.com/SSYGEN/blog/issues/29)
+
+**[⬆ Вернуться к оглавлению](../index.md)**

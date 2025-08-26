@@ -137,3 +137,5 @@ tags:
   - [Заключение](https://learnopengl.com/In-Practice/2D-Game/Final-thoughts)
 - [Handmade Hero](https://handmadehero.org)
 - [Как создать Minecraft на C++/OpenGL](https://www.youtube.com/playlist?list=PLMZ_9w2XRxiZq1vfw1lrpCMRDufe2MKV_) (видео)
+
+**[⬆ Вернуться к оглавлению](../index.md)**

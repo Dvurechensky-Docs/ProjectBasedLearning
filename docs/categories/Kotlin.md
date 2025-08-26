@@ -12,3 +12,5 @@ tags:
 ## Kotlin 🚩
 
 - [Keddit — Изучаем Kotlin, создавая Android-приложение](https://medium.com/@juanchosaravia/learn-kotlin-while-developing-an-android-app-introduction-567e21ff9664)
+
+**[⬆ Вернуться к оглавлению](../index.md)**

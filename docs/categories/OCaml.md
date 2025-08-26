@@ -13,3 +13,5 @@ tags:
 
 - [Реализация языка с LLVM на OCaml](https://llvm.org/docs/tutorial/#kaleidoscope-implementing-a-language-with-llvm-in-objective-caml)
 - [Создание эмулятора Game Boy на OCaml](https://linoscope.github.io/writing-a-game-boy-emulator-in-ocaml/)
+
+**[⬆ Вернуться к оглавлению](../index.md)**

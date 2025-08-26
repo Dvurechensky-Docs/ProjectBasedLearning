@@ -26,3 +26,5 @@ tags:
 - [Клон Wordle](https://youtu.be/_W0RN_Cqhpg)
 - [Клон Zoom](https://youtu.be/sMA1dKbv33Y)
 - [Клон Netflix](https://youtu.be/J8IFNKzs3TI)
+
+**[⬆ Вернуться к оглавлению](../index.md)**

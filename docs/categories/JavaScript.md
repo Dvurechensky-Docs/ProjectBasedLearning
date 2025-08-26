@@ -17,3 +17,5 @@ tags:
 - [Создание игры Крестики-Нолики на JavaScript](https://medium.com/javascript-in-plain-english/build-tic-tac-toe-game-using-javascript-3afba3c8fdcc)
 - [Создание простого приложения погоды на Vanilla JavaScript](https://webdesign.tutsplus.com/tutorials/build-a-simple-weather-app-with-vanilla-javascript--cms-33893)
 - [Создание приложения списка дел на JavaScript](https://github.com/dwyl/javascript-todo-list-tutorial)
+
+**[⬆ Вернуться к оглавлению](../index.md)**

@@ -48,3 +48,5 @@ tags:
 - [Создание TCP-чата на Go (видео)](https://www.youtube.com/watch?v=Sphme0BqJiY)
 - [Создание BitTorrent-клиента с нуля на Go](https://blog.jse.li/posts/torrent/)
 - [Мастер-класс по REST API с Go, PostgreSQL и Docker (видео, в процессе)](https://www.youtube.com/watch?v=rx6CPDK_5mU&list=PLy_6D98if3ULEtXtNSY_2qN21VCKgoQAE)
+
+**[⬆ Вернуться к оглавлению](../index.md)**

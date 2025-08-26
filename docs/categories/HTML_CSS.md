@@ -143,3 +143,5 @@ tags:
 - [Создаём свой Redux](https://zapier.com/engineering/how-to-build-redux/)
 - [Как написать собственный Virtual DOM](https://medium.com/@deathmood/how-to-write-your-own-virtual-dom-ee74acc13060)
 - [Создание Realtime серверless GraphQL API с WebSockets на AWS](https://andrewgriffithsonline.com/blog/serverless-websockets-on-aws/)
+
+**[⬆ Вернуться к оглавлению](../index.md)**

@@ -17,3 +17,5 @@ tags:
 - [Создание собственного IRC бота](https://wiki.haskell.org/Roll_your_own_IRC_bot)
 - [Создание Movie Monad](https://lettier.github.io/posts/2016-08-15-making-movie-monor.html)
 - [Создание сайта на Haskell **(устаревшее)**](http://adit.io/posts/2013-04-15-making-a-website-with-haskell.html)
+
+**[⬆ Вернуться к оглавлению](../index.md)**

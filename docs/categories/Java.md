@@ -15,3 +15,5 @@ tags:
 - [Создание простого HTTP-сервера на Java](http://javarevisited.blogspot.com/2015/06/how-to-create-http-server-in-java-serversocket-example.html)
 - [Создание приложения-фонарика для Android](https://www.youtube.com/watch?v=dhWL4DC7Krs) (видео)
 - [Создание Spring Boot приложения с аутентификацией пользователей](https://spring.io/guides/gs/securing-web/)
+
+**[⬆ Вернуться к оглавлению](../index.md)**
