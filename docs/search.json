@@ -2,12 +2,18 @@
 layout: null
 ---
 [
-{% assign pages_to_index = site.pages | where_exp:"page","page.path contains 'categories/' and page.lang != 'ru'" %}
-{% for page in pages_to_index %}
+{% assign first_item = true %}
+{% for page in site.pages %}
+{% if page.path contains 'categories/' %}
+{% unless page.lang == 'ru' %}
+  {% unless first_item %},{% endunless %}
   {
     "title": "{{ page.title | strip_newlines | replace: '"', ' ' }}",
     "url": "{{ page.url | relative_url }}",
     "content": {{ page.content | strip_html | jsonify }}
-  }{% unless forloop.last %},{% endunless %}
+  }
+  {% assign first_item = false %}
+{% endunless %}
+{% endif %}
 {% endfor %}
 ]

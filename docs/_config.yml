@@ -6,7 +6,6 @@ lang: en
 plugins:
   - jemoji
   - jekyll-mentions
-paginate: 5
 collections:
   categories:
     output: true
