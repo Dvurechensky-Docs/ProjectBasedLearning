@@ -56,7 +56,7 @@
     "url": {{ '/' | absolute_url | jsonify }},
     "potentialAction": {
       "@type": "SearchAction",
-      "target": {{ '/search.html?q={search_term_string}' | absolute_url | jsonify }},
+      "target": "{{ '/search.html' | absolute_url }}?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   },
