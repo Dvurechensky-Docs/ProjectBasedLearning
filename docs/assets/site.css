@@ -79,9 +79,11 @@ a:hover { color: var(--accent-2); }
   place-items: center;
   border: 1px solid rgba(94, 234, 212, 0.55);
   border-radius: var(--radius);
-  background: #10231f;
+  background: #10231f url("/ProjectBasedLearning/assets/favicon.ico") center / 32px 32px no-repeat;
   color: var(--accent);
+  font-size: 0;
   font-weight: 800;
+  overflow: hidden;
 }
 
 .brand-mark img {
@@ -139,9 +141,13 @@ a:hover { color: var(--accent-2); }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.75fr);
   gap: 34px;
   align-items: center;
+}
+
+.hero-copy {
+  min-width: 0;
 }
 
 .eyebrow {
@@ -160,8 +166,9 @@ h1, h2, h3 {
 
 h1 {
   margin: 0;
-  max-width: 780px;
-  font-size: clamp(2rem, 5vw, 4.7rem);
+  max-width: 11.5ch;
+  overflow-wrap: anywhere;
+  font-size: clamp(2rem, 4.4vw, 4.15rem);
 }
 
 .hero-text {
@@ -192,6 +199,9 @@ h1 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
+  width: 100%;
+  max-width: 560px;
+  justify-self: end;
   padding: 18px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -375,6 +385,11 @@ h1 {
     grid-template-columns: 1fr;
   }
 
+  h1 {
+    max-width: 13ch;
+    font-size: clamp(2.4rem, 11vw, 4.2rem);
+  }
+
   .top-nav {
     order: 3;
     overflow-x: auto;
@@ -389,6 +404,11 @@ h1 {
     padding-top: 34px;
   }
 
+  .hero-panel {
+    justify-self: stretch;
+    max-width: none;
+  }
+
   .side-panel {
     position: static;
   }
@@ -401,6 +421,11 @@ h1 {
 
   .hero-panel {
     grid-template-columns: 1fr;
+  }
+
+  h1 {
+    max-width: 100%;
+    font-size: clamp(2.1rem, 13vw, 3.4rem);
   }
 
   .brand small {
