@@ -1,38 +1,467 @@
----
-layout: null
----
 <?xml version="1.0" encoding="utf-8"?>
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
 >
-{% assign sitemap_pages = site.pages | where: 'layout', 'default' | sort: 'url' %}
-{% for item in sitemap_pages %}
-  {% assign item_lang = item.lang | default: 'en' %}
-  {% assign loc_path = item.url | replace: '#', '%23' | replace: '+', '%2B' %}
-  {% if item_lang == 'ru' %}
-    {% assign en_path = item.url | replace_first: '/ru/', '/' | replace: '#', '%23' | replace: '+', '%2B' %}
-    {% assign ru_path = loc_path %}
-  {% else %}
-    {% assign en_path = loc_path %}
-    {% assign ru_path = item.url | replace_first: '/', '/ru/' | replace: '#', '%23' | replace: '+', '%2B' %}
-  {% endif %}
   <url>
-    <loc>{{ loc_path | absolute_url | xml_escape }}</loc>
-    <lastmod>{{ item.date | default: site.time | date: '%Y-%m-%d' }}</lastmod>
-    <changefreq>{% if item.url == '/' or item.url == '/ru/' %}weekly{% else %}monthly{% endif %}</changefreq>
-    <priority>{% if item.url == '/' or item.url == '/ru/' %}1.0{% elsif item.url contains '/categories/' %}0.8{% else %}0.7{% endif %}</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="{{ en_path | absolute_url | xml_escape }}" />
-    <xhtml:link rel="alternate" hreflang="ru" href="{{ ru_path | absolute_url | xml_escape }}" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="{{ en_path | absolute_url | xml_escape }}" />
-    {% if item.url == '/' or item.url == '/ru/' %}
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/" />
     <image:image>
-      <image:loc>{{ '/assets/favicon.ico' | absolute_url | xml_escape }}</image:loc>
-      <image:caption>{% if item_lang == 'ru' %}Иконка портала проектного обучения программированию{% else %}Project based programming learning portal icon{% endif %}</image:caption>
+      <image:loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/assets/favicon.ico</image:loc>
+      <image:caption>Project based programming learning portal icon</image:caption>
       <image:title>Project Based Learning</image:title>
     </image:image>
-    {% endif %}
   </url>
-{% endfor %}
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/additionals.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/additionals.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/additionals.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/additionals.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/C%23.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/C%23.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/C%23.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/C%23.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/C%2B%2B.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/C%2B%2B.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/C%2B%2B.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/C%2B%2B.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Clojure.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Clojure.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Clojure.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Clojure.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Dart.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Dart.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Dart.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Dart.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Elixir.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Elixir.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Elixir.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Elixir.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Erlang.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Erlang.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Erlang.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Erlang.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/F%23.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/F%23.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/F%23.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/F%23.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Go.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Go.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Go.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Go.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Haskell.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Haskell.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Haskell.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Haskell.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/HTML_CSS.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/HTML_CSS.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/HTML_CSS.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/HTML_CSS.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Java.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Java.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Java.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Java.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/JavaScript.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/JavaScript.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/JavaScript.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/JavaScript.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Kotlin.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Kotlin.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Kotlin.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Kotlin.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Lua.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Lua.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Lua.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Lua.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/OCaml.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/OCaml.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/OCaml.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/OCaml.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/PHP.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/PHP.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/PHP.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/PHP.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Python.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Python.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Python.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Python.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/R.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/R.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/R.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/R.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Ruby.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Ruby.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Ruby.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Ruby.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Rust.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Rust.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Rust.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Rust.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Scala.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Scala.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Scala.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Scala.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Swift.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Swift.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Swift.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Swift.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/" />
+    <image:image>
+      <image:loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/assets/favicon.ico</image:loc>
+      <image:caption>Иконка портала проектного обучения программированию</image:caption>
+      <image:title>Project Based Learning</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/additionals.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/additionals.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/additionals.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/additionals.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/C%23.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/C%23.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/C%23.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/C%23.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/C%2B%2B.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/C%2B%2B.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/C%2B%2B.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/C%2B%2B.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Clojure.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Clojure.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Clojure.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Clojure.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Dart.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Dart.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Dart.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Dart.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Elixir.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Elixir.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Elixir.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Elixir.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Erlang.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Erlang.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Erlang.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Erlang.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/F%23.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/F%23.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/F%23.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/F%23.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Go.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Go.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Go.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Go.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Haskell.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Haskell.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Haskell.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Haskell.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/HTML_CSS.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/HTML_CSS.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/HTML_CSS.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/HTML_CSS.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Java.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Java.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Java.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Java.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/JavaScript.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/JavaScript.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/JavaScript.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/JavaScript.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Kotlin.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Kotlin.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Kotlin.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Kotlin.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Lua.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Lua.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Lua.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Lua.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/OCaml.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/OCaml.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/OCaml.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/OCaml.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/PHP.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/PHP.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/PHP.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/PHP.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Python.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Python.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Python.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Python.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/R.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/R.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/R.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/R.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Ruby.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Ruby.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Ruby.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Ruby.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Rust.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Rust.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Rust.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Rust.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Scala.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Scala.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Scala.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Scala.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Swift.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Swift.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/categories/Swift.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/categories/Swift.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/search.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/search.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/search.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/search.html" />
+  </url>
+  <url>
+    <loc>https://dvurechensky-docs.github.io/ProjectBasedLearning/search.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/search.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/ru/search.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dvurechensky-docs.github.io/ProjectBasedLearning/search.html" />
+  </url>
 </urlset>
