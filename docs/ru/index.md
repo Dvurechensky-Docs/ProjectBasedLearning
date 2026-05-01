@@ -15,6 +15,10 @@ published: true
 
 Страницы хорошо попадают в запросы вроде: проекты для начинающих программистов, идеи проектов на Python, проекты JavaScript для портфолио, Rust tutorials, C# backend проекты, HTML CSS практика и web development projects with source code.
 
+Портал связан с другими материалами Dvurechensky. Для API-практики и backend-разработки пригодится [API-список](https://dvurechensky-docs.github.io/Internet/). Для чистой структуры репозиториев используй [Gitignore](https://dvurechensky-docs.github.io/Gitignore/). Для frontend-проектов хорошо дополняет эту подборку [Web Frontend Knowledge](https://dvurechensky-docs.github.io/WebFrontendKnowledge/), а для .NET-трека можно продолжить в [Basic Knowledge C#](https://dvurechensky-docs.github.io/BasicKnowledgeCSharp/), [Patterns C# Programming](https://dvurechensky-docs.github.io/PatternsCSharpProgramming/) и [Interview C# .NET](https://dvurechensky-docs.github.io/InterviewCSharpNet/).
+
+Официальная страница автора: [Dvurechensky](https://dvurechensky.pro). Из связанных проектов также полезны [Lizerium Portal](https://lizup.ru/) и русский сервис [Shields.io](https://shields.dvurechensky.pro/).
+
 ## Быстрый старт
 
 - [Поиск по порталу](search.md)

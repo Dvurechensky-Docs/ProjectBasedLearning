@@ -84,6 +84,13 @@ a:hover { color: var(--accent-2); }
   font-weight: 800;
 }
 
+.brand-mark img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
 .brand strong, .brand small { display: block; }
 .brand small { color: var(--muted); font-size: 0.82rem; }
 
@@ -328,10 +335,43 @@ h1 {
   justify-content: space-between;
 }
 
+.related-portals {
+  padding: 0 0 54px;
+}
+
+.related-portals h2 {
+  margin: 0 0 16px;
+  font-size: 1.15rem;
+}
+
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.portal-grid a {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(21, 27, 35, 0.74);
+  color: var(--text);
+  font-weight: 700;
+}
+
+.portal-grid a:hover {
+  border-color: rgba(94, 234, 212, 0.55);
+  color: var(--accent);
+}
+
 @media (max-width: 860px) {
   .header-grid,
   .hero-grid,
-  .content-grid {
+  .content-grid,
+  .portal-grid {
     grid-template-columns: 1fr;
   }
 

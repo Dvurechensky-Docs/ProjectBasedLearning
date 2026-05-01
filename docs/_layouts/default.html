@@ -21,7 +21,9 @@
     <header class="site-header">
       <div class="site-shell header-grid">
         <a class="brand" href="{{ home_href | relative_url }}" aria-label="Project Based Learning home">
-          <span class="brand-mark">PBL</span>
+          <span class="brand-mark">
+            <img src="{{ '/assets/favicon.ico' | relative_url }}" alt="" width="32" height="32">
+          </span>
           <span>
             <strong>Project Based Learning</strong>
             <small>Programming projects by language</small>
@@ -80,6 +82,22 @@
           <a href="{{ category_prefix | append: 'HTML_CSS.html' | relative_url }}">HTML & CSS projects</a>
         </aside>
       </div>
+
+      <section class="related-portals">
+        <div class="site-shell">
+          <h2>{% if page.lang == 'ru' %}Связанные порталы{% else %}Related portals{% endif %}</h2>
+          <div class="portal-grid">
+            <a href="https://dvurechensky.pro" rel="me noopener">Dvurechensky</a>
+            <a href="https://lizup.ru/" rel="noopener">Lizerium Portal</a>
+            <a href="https://dvurechensky-docs.github.io/Internet/" rel="noopener">API list</a>
+            <a href="https://dvurechensky-docs.github.io/Gitignore/" rel="noopener">Gitignore</a>
+            <a href="https://dvurechensky-docs.github.io/WebFrontendKnowledge/" rel="noopener">Web Frontend Knowledge</a>
+            <a href="https://dvurechensky-docs.github.io/GeneralDocsMarkdown/" rel="noopener">General Docs Markdown</a>
+            <a href="https://dvurechensky-docs.github.io/BasicKnowledgeCSharp/" rel="noopener">Basic Knowledge C#</a>
+            <a href="https://dvurechensky-docs.github.io/PatternsCSharpProgramming/" rel="noopener">Patterns C# Programming</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
