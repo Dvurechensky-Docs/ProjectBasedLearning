@@ -1,18 +1,18 @@
 ---
 layout: default
-lang: en
-title: 'Search'
-seo_title: 'Search programming projects and coding tutorials'
-description: 'Search project based learning resources by programming language, framework, topic, and tutorial title.'
-h1: 'Search project based learning resources'
+lang: ru
+title: 'Поиск'
+seo_title: 'Поиск проектов для изучения программирования'
+description: 'Поиск по подборке проектного обучения: Python, JavaScript, Rust, C#, HTML CSS, backend, frontend, мобильная разработка и практические туториалы.'
+h1: 'Поиск проектов и туториалов'
 date: 2025-08-21
 published: true
 ---
 
 <div id="search-container">
-  <input type="text" id="search" placeholder="Search Python projects, Rust tutorials, JavaScript apps...">
+  <input type="text" id="search" placeholder="Искать проекты на Python, Rust, JavaScript, C#...">
   <ul id="results"></ul>
-  <a href="index.html">Back to all categories</a>
+  <a href="index.html">Назад ко всем категориям</a>
 </div>
 
 <script src="https://unpkg.com/lunr/lunr.js"></script>
@@ -55,7 +55,8 @@ fetch('{{ "/search.json" | relative_url }}')
       for (const url in grouped) {
         const catBlock = document.createElement('div');
         catBlock.className = 'search-result';
-        catBlock.innerHTML = `<a href="${url}">${grouped[url].title}</a>`;
+        const localizedUrl = url.replace('/ProjectBasedLearning/', '/ProjectBasedLearning/ru/');
+        catBlock.innerHTML = `<a href="${localizedUrl}">${grouped[url].title}</a>`;
         const ul = document.createElement('ul');
         ul.classList.add("search-ul-st");
         grouped[url].rows.forEach(row => {

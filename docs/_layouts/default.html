@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include seo.html %}
+    {% include head-custom.html %}
+    <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+  </head>
+  <body>
+    {% if page.lang == 'ru' %}
+      {% assign home_href = '/ru/' %}
+      {% assign search_href = '/ru/search.html' %}
+      {% assign category_prefix = '/ru/categories/' %}
+    {% else %}
+      {% assign home_href = '/' %}
+      {% assign search_href = '/search.html' %}
+      {% assign category_prefix = '/categories/' %}
+    {% endif %}
+    <a class="skip-link" href="#content">{% if page.lang == 'ru' %}К содержанию{% else %}Skip to content{% endif %}</a>
+    <header class="site-header">
+      <div class="site-shell header-grid">
+        <a class="brand" href="{{ home_href | relative_url }}" aria-label="Project Based Learning home">
+          <span class="brand-mark">PBL</span>
+          <span>
+            <strong>Project Based Learning</strong>
+            <small>Programming projects by language</small>
+          </span>
+        </a>
+        <nav class="top-nav" aria-label="Main navigation">
+          <a href="{{ home_href | relative_url }}">{% if page.lang == 'ru' %}Главная{% else %}Home{% endif %}</a>
+          <a href="{{ search_href | relative_url }}">{% if page.lang == 'ru' %}Поиск{% else %}Search{% endif %}</a>
+          <a href="https://github.com/Dvurechensky-Docs/ProjectBasedLearning" rel="noopener">GitHub</a>
+        </nav>
+        <label class="language-picker">
+          <span>{% if page.lang == 'ru' %}Язык{% else %}Language{% endif %}</span>
+          <select id="language-select" aria-label="Language">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+          </select>
+        </label>
+      </div>
+    </header>
+
+    <main id="content" class="site-main">
+      <section class="hero">
+        <div class="site-shell hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Curated programming tutorials</p>
+            <h1>{{ page.h1 | default: page.title | default: site.title }}</h1>
+            <p class="hero-text">
+              {% if page.lang == 'ru' %}
+                Практические проекты, руководства и подборки для изучения языков программирования через реальные задачи.
+              {% else %}
+                Practical project ideas, tutorials, and learning paths for developers who learn by building real software.
+              {% endif %}
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="{{ search_href | relative_url }}">{% if page.lang == 'ru' %}Найти туториалы{% else %}Find tutorials{% endif %}</a>
+              <a class="button ghost" href="{{ category_prefix | append: 'Python.html' | relative_url }}">{% if page.lang == 'ru' %}Открыть Python{% else %}Explore Python{% endif %}</a>
+            </div>
+          </div>
+          <div class="hero-panel" aria-hidden="true">
+            <span>C#</span><span>Rust</span><span>Python</span><span>JavaScript</span>
+            <span>Go</span><span>Kotlin</span><span>Swift</span><span>HTML/CSS</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="site-shell content-grid">
+        <article class="content-card">
+          {{ content }}
+        </article>
+        <aside class="side-panel" aria-label="Popular learning paths">
+          <h2>{% if page.lang == 'ru' %}Популярные направления{% else %}Popular paths{% endif %}</h2>
+          <a href="{{ category_prefix | append: 'Python.html' | relative_url }}">Python projects</a>
+          <a href="{{ category_prefix | append: 'JavaScript.html' | relative_url }}">JavaScript projects</a>
+          <a href="{{ category_prefix | append: 'Rust.html' | relative_url }}">Rust projects</a>
+          <a href="{{ category_prefix | append: 'C%23.html' | relative_url }}">C# projects</a>
+          <a href="{{ category_prefix | append: 'HTML_CSS.html' | relative_url }}">HTML & CSS projects</a>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-shell">
+        <span>© {{ site.time | date: '%Y' }} Dvurechensky Docs</span>
+        <span>{% if page.lang == 'ru' %}Практические ресурсы по программированию для начинающих и инженеров.{% else %}Project-based programming resources for beginners and engineers.{% endif %}</span>
+      </div>
+    </footer>
+    <script src="{{ '/assets/language.js' | relative_url }}" defer></script>
+  </body>
+</html>

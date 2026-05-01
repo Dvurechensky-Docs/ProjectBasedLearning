@@ -1,0 +1,6 @@
+{% assign source_page = site.pages | where: 'path', include.source | first %}
+{% if source_page %}
+{{ source_page.content | markdownify }}
+{% else %}
+<p>Category page is temporarily unavailable.</p>
+{% endif %}

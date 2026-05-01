@@ -1,0 +1,38 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+{% assign sitemap_pages = site.pages | where: 'layout', 'default' | sort: 'url' %}
+{% for item in sitemap_pages %}
+  {% assign item_lang = item.lang | default: 'en' %}
+  {% assign loc_path = item.url | replace: '#', '%23' | replace: '+', '%2B' %}
+  {% if item_lang == 'ru' %}
+    {% assign en_path = item.url | replace_first: '/ru/', '/' | replace: '#', '%23' | replace: '+', '%2B' %}
+    {% assign ru_path = loc_path %}
+  {% else %}
+    {% assign en_path = loc_path %}
+    {% assign ru_path = item.url | replace_first: '/', '/ru/' | replace: '#', '%23' | replace: '+', '%2B' %}
+  {% endif %}
+  <url>
+    <loc>{{ loc_path | absolute_url | xml_escape }}</loc>
+    <lastmod>{{ item.date | default: site.time | date: '%Y-%m-%d' }}</lastmod>
+    <changefreq>{% if item.url == '/' or item.url == '/ru/' %}weekly{% else %}monthly{% endif %}</changefreq>
+    <priority>{% if item.url == '/' or item.url == '/ru/' %}1.0{% elsif item.url contains '/categories/' %}0.8{% else %}0.7{% endif %}</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ en_path | absolute_url | xml_escape }}" />
+    <xhtml:link rel="alternate" hreflang="ru" href="{{ ru_path | absolute_url | xml_escape }}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ en_path | absolute_url | xml_escape }}" />
+    {% if item.url == '/' or item.url == '/ru/' %}
+    <image:image>
+      <image:loc>{{ '/assets/favicon.ico' | absolute_url | xml_escape }}</image:loc>
+      <image:caption>{% if item_lang == 'ru' %}Иконка портала проектного обучения программированию{% else %}Project based programming learning portal icon{% endif %}</image:caption>
+      <image:title>Project Based Learning</image:title>
+    </image:image>
+    {% endif %}
+  </url>
+{% endfor %}
+</urlset>

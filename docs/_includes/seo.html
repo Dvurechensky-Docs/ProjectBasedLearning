@@ -1,0 +1,70 @@
+{% assign site_url = site.url | default: 'https://dvurechensky-docs.github.io' %}
+{% assign baseurl = site.baseurl | default: '/ProjectBasedLearning' %}
+{% assign page_lang = page.lang | default: 'en' %}
+{% assign page_title = page.seo_title | default: page.title | default: site.title %}
+{% assign page_description = page.description | default: site.description %}
+{% assign canonical_path = page.canonical_url | default: page.url | replace: '#', '%23' | replace: '+', '%2B' %}
+{% assign canonical_url = canonical_path | absolute_url %}
+{% if page.alternate_en %}
+  {% assign en_url = page.alternate_en | replace: '#', '%23' | replace: '+', '%2B' | absolute_url %}
+{% elsif page_lang == 'ru' %}
+  {% assign en_url = page.url | replace_first: '/ru/', '/' | replace: '#', '%23' | replace: '+', '%2B' | absolute_url %}
+{% else %}
+  {% assign en_url = page.url | replace: '#', '%23' | replace: '+', '%2B' | absolute_url %}
+{% endif %}
+{% if page.alternate_ru %}
+  {% assign ru_url = page.alternate_ru | replace: '#', '%23' | replace: '+', '%2B' | absolute_url %}
+{% elsif page_lang == 'ru' %}
+  {% assign ru_url = page.url | replace: '#', '%23' | replace: '+', '%2B' | absolute_url %}
+{% else %}
+  {% assign ru_url = page.url | replace_first: '/', '/ru/' | replace: '#', '%23' | replace: '+', '%2B' | absolute_url %}
+{% endif %}
+<title>{{ page_title | escape }} | Project Based Learning</title>
+<meta name="description" content="{{ page_description | escape }}">
+<meta name="author" content="Dvurechensky Docs">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<meta name="keywords" content="project based learning, programming projects, coding tutorials, learn programming by building projects, beginner programming projects, Python projects, JavaScript projects, Rust projects, C# projects, web development projects, portfolio projects, обучение программированию, проекты для программистов, изучение Python, JavaScript проекты, Rust проекты, C# проекты">
+<meta name="theme-color" content="#0d1117">
+<link rel="canonical" href="{{ canonical_url }}">
+<link rel="alternate" hreflang="en" href="{{ en_url }}">
+<link rel="alternate" hreflang="ru" href="{{ ru_url }}">
+<link rel="alternate" hreflang="x-default" href="{{ en_url }}">
+<meta property="og:locale" content="{% if page_lang == 'ru' %}ru_RU{% else %}en_US{% endif %}">
+<meta property="og:locale:alternate" content="{% if page_lang == 'ru' %}en_US{% else %}ru_RU{% endif %}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Project Based Learning">
+<meta property="og:title" content="{{ page_title | escape }}">
+<meta property="og:description" content="{{ page_description | escape }}">
+<meta property="og:url" content="{{ canonical_url }}">
+<meta property="og:image" content="{{ '/assets/favicon.ico' | absolute_url }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page_title | escape }}">
+<meta name="twitter:description" content="{{ page_description | escape }}">
+<meta name="twitter:image" content="{{ '/assets/favicon.ico' | absolute_url }}">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": {{ page_title | jsonify }},
+  "description": {{ page_description | jsonify }},
+  "url": {{ canonical_url | jsonify }},
+  "inLanguage": {{ page_lang | jsonify }},
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Project Based Learning",
+    "url": {{ '/' | absolute_url | jsonify }},
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {{ '/search.html?q={search_term_string}' | absolute_url | jsonify }},
+      "query-input": "required name=search_term_string"
+    }
+  },
+  "about": [
+    "programming tutorials",
+    "project based learning",
+    "software development practice",
+    "coding portfolio projects"
+  ]
+}
+</script>

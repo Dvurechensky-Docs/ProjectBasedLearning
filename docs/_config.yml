@@ -1,9 +1,9 @@
-title: Обучение на основе проектов
-description: Ccылки на ресурсы по категориям языков программирования для обучения
-remote_theme: pages-themes/midnight@v0.2.0
+title: Project Based Learning
+description: Project based learning portal with programming tutorials, coding project ideas, and curated resources by language.
+url: https://dvurechensky-docs.github.io
+baseurl: /ProjectBasedLearning
+lang: en
 plugins:
-  - jekyll-remote-theme # add this line to the plugins list if you already have one
-  - jekyll-sitemap
   - jemoji
   - jekyll-mentions
 paginate: 5
